@@ -1,70 +1,68 @@
-# Credit Card Fraud Detection
-Upgrad Capstone Project (Data Science Bootcamp)
+# 📌 Credit Card Fraud Detection
+Upgrad Data Science Bootcamp - Capstone Project.
 
-## 📌 Project Overview
-This project aims to detect fraudulent credit card transactions using machine learning techniques. The dataset used is highly imbalanced, as fraudulent transactions are rare compared to genuine ones. To tackle this issue, Synthetic Minority Over-sampling Technique (SMOTE) is applied. The model is trained using a **Random Forest Classifier** and evaluated based on various performance metrics.
+## 📖 Project Overview
+This project aims to detect fraudulent transactions in credit card data using machine learning techniques. The dataset used is a well-known credit card fraud dataset, where transactions are labeled as either legitimate (0) or fraudulent (1). The goal is to build a model that can accurately distinguish between these two classes.
 
-## 🔍 Problem Statement
-Financial fraud is a major challenge in the banking sector, leading to huge monetary losses. This project builds a fraud detection system that can classify transactions as **fraudulent (1) or non-fraudulent (0)** with high accuracy.
+## ✅ Problem Statement
+Credit card fraud is a significant financial crime affecting consumers and institutions. Identifying fraudulent transactions quickly and accurately is crucial to minimize losses. This project applies data science and machine learning techniques to analyze transaction patterns and classify them accordingly.
 
-## 📂 Dataset
-The dataset used for this project is the **Credit Card Fraud Detection dataset** from Kaggle. It contains **284,807 transactions**, of which only **492** are fraudulent (high class imbalance).
+## 📂 Dataset Information
+The dataset consists of **284,807** transactions with **31 features**:
+- **Time**: Number of seconds elapsed between the first transaction and the given transaction.
+- **V1-V28**: Principal components obtained using PCA to anonymize original features.
+- **Amount**: Transaction amount.
+- **Class**: The target variable (0 = Legitimate, 1 = Fraudulent).
 
-- **Features**: 30 numerical features (`V1` to `V28`), `Time`, and `Amount`
-- **Target Variable**: `Class` (0 = Genuine, 1 = Fraudulent)
+## ⚙️ Methodology
+1. **Data Preprocessing**: Handling missing values, normalizing numerical features, and performing exploratory data analysis (EDA).
+2. **Feature Engineering**: Using feature selection and transformation techniques to enhance model performance.
+3. **Model Training**: Training machine learning models such as logistic regression, decision trees, random forests, and deep learning-based methods.
+4. **Evaluation**: Assessing performance using accuracy, precision, recall, F1-score, and ROC-AUC metrics.
 
-## 🛠️ Tech Stack & Dependencies
-- **Python** (pandas, numpy, matplotlib, seaborn, scikit-learn, imbalanced-learn, joblib)
-- **Machine Learning Algorithm**: Random Forest Classifier
-- **Resampling Technique**: SMOTE (Synthetic Minority Over-sampling Technique)
+## 🛠️ Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- Python (>=3.8)
+- Jupyter Notebook (optional for interactive analysis)
+- Required libraries:
+  ```bash
+  pip install pandas numpy matplotlib seaborn scikit-learn
+  ```
 
-## ⚙️ Project Setup
+### 🚀 Running the Project
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repository.git
+   cd credit-card-fraud-detection
+   ```
+2. Run the Jupyter Notebook or Python script:
+   ```bash
+   jupyter notebook analysis.ipynb
+   ```
+   or
+   ```bash
+   python main.py
+   ```
 
-### 1️⃣ Install Dependencies
-Ensure you have Python installed (preferably **Python 3.8+**). Then, install the required dependencies:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn joblib
-```
+## 📊 Model Training & Evaluation
+- The dataset is highly imbalanced, so techniques like **SMOTE (Synthetic Minority Over-sampling Technique)** and **class weighting** are applied.
+- Evaluation is performed using various classification metrics to ensure robustness.
+- The final trained model can be saved and used for real-time fraud detection.
 
-### 2️⃣ Download Dataset
-Download the `creditcard.csv` dataset from [Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud) and place it in the project directory.
+## 🎯 Results & Insights
+- The dataset contains a highly imbalanced class distribution (fraud cases are rare).
+- Logistic regression, random forests, and neural networks show varying levels of performance.
+- Feature importance analysis helps in understanding transaction behavior.
 
-### 3️⃣ Run the Code
-Execute the Python script to train the model and generate results:
-```bash
-python fraud_detection.py
-```
+## 📢 Future Improvements
+- Experimenting with deep learning techniques (e.g., LSTMs, autoencoders) for anomaly detection.
+- Deploying the model as an API for real-time fraud detection.
+- Improving data preprocessing strategies for better model generalization.
 
-## 🔄 Data Preprocessing
-1. **Feature Scaling**: The `Amount` column is scaled using `StandardScaler`.
-2. **Dropping Irrelevant Features**: The `Time` column is removed.
-3. **Handling Imbalanced Data**: SMOTE is applied to balance the fraud and non-fraud cases.
-4. **Train-Test Split**: The dataset is split into 80% training and 20% testing data.
+## Contributing
+Feel free to contribute to this project by submitting pull requests or reporting issues.
 
-## 🎯 Model Training & Evaluation
-- The **Random Forest Classifier** is trained with **100 estimators**.
-- The model's performance is evaluated using:
-  - **Accuracy Score**
-  - **Classification Report** (Precision, Recall, F1-score)
-  - **Confusion Matrix**
-
-## 📊 Visualizations
-- **Class Distribution**: Shows the data imbalance before applying SMOTE.
-- **Feature Correlation Heatmap**: Helps understand feature relationships.
-- **Confusion Matrix**: Evaluates model predictions.
-
-## 🚀 Deployment Plan
-- **Model Saving**: The trained model is saved as `credit_card_fraud_model.pkl` using `joblib`.
-- The saved model can be used for real-time fraud detection by loading it and making predictions on new transaction data.
-
-## 📜 Future Improvements
-- Experiment with **deep learning** (e.g., LSTM, Autoencoders) for anomaly detection.
-- Deploy the model as a **REST API** using Flask or FastAPI.
-- Implement **real-time fraud detection** by integrating the model with a live transaction processing system.
-
-## 👥 Contributors
-- **Avinash_Naidu**
-
-## 📝 License
-This project is open-source under the **MIT License**.
+## License
+This project is released under the MIT License.
 
