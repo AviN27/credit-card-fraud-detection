@@ -1,4 +1,5 @@
 # Credit Card Fraud Detection
+## Upgrad Capstone project
 
 ## Overview
 This project implements a **Credit Card Fraud Detection** system using **Random Forest Classifier**. The dataset is highly imbalanced, so **SMOTE (Synthetic Minority Over-sampling Technique)** is used to balance the data. The model is trained and evaluated using various performance metrics.
